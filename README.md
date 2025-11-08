@@ -1,50 +1,117 @@
-# Welcome to your Expo app 👋
+📦 Reporting POC
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bilingual (English/Welsh) reporting proof-of-concept containing:
 
-## Get started
+- 🖥️ Field Reports Dashboard (React + Vite + Supabase)
 
-1. Install dependencies
+- 📱 Mobile Reporting App (Expo Go + React Native + Supabase)
 
-   ```bash
-   npm install
-   ```
+🧩 Folder structure
 
-2. Start the app
+reporting-poc/
+│
+├── report-dashboard/ # Web dashboard (Vite + React)
+├── app/ # Expo Go app (React Native)
+├── screens/ # Optional shared screens/components
+├── shared/ # Shared logic (e.g. Supabase client, translations)
+├── .gitignore
+├── README.md
+└── package.json # If using workspaces/monorepo setup
 
-   ```bash
-   npx expo start
-   ```
+⚙️ Prerequisites
 
-In the output, you'll find options to open the app in a
+Before running either project, make sure you have:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js ≥ 18
+- npm or yarn (npm prefered)
+- Git (This repository an be used or cloned)
+- Expo Go app installed on your mobile device (for the app)
+- A Supabase project with your database + API keys
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+🚀 1. Run the Dashboard (Web App)
+▶️ Setup (Local code, if npm insn't already installed)
+$ cd report-dashboard
+$ npm install
 
-When you're ready, run:
+▶️ Add environment variables
+Create a .env file inside report-dashboard/ with:
+$ VITE_SUPABASE_URL=https://your-supabase-url.supabase.co
+$ VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
 
-```bash
-npm run reset-project
-```
+▶️ Run locally
+$ npm run dev
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🏗️ Build for production
+$ npm run build
+$ vercel deploy (to deploy the server)
+$ vercel --prod (to launch the Production version)
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+📱 2. Run the Expo Go App (Mobile)
+▶️ Setup
+$ cd app
+$ npm install
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+▶️ Add environment variables
+Create a .env file inside app/ with:
+$ EXPO_PUBLIC_SUPABASE_URL=https://your-supabase-url.supabase.co
+$ EXPO_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 
-## Join the community
+▶️ Run locally
+$ npx expo start
 
-Join our community of developers creating universal apps.
+Then:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Scan the QR code with your Expo Go app (iOS/Android), or
+- Press w to open in a web preview
+
+---
+
+🌍 3. Bilingual Support (English/Welsh)
+Both the Dashboard and App support dynamic language switching via a shared LanguageContext.
+
+- Switch between English 🇬🇧 and Welsh 🏴 in real time
+- Translations are stored in LanguageContext.js
+- Comments are stored in Supabase with both comment (English) and comment_cy (Welsh)
+
+---
+
+🧠 4. Folder explanations
+| Folder | Description |
+| ------------------- | --------------------------------------------------------- |
+| `report-dashboard/` | Web dashboard using Vite + React |
+| `app/` | Expo Go mobile app for submitting field reports |
+| `screens/` | Extra or shared React Native screens |
+| `shared/` | Common logic (Supabase client, translation helpers, etc.) |
+
+---
+
+🛠️ 5. Useful commands
+| Command | Description |
+| ------------------------- | -------------------------------------- |
+| `git status` | Check which files are tracked |
+| `git add .` | Stage all changes |
+| `git commit -m "message"` | Commit your changes |
+| `git push` | Push to GitHub |
+| `npm run dev` | Run local dev server (dashboard) |
+| `npx expo start` | Run local Expo dev server (mobile app) |
+
+---
+
+🧾 6. Notes
+
+- Make sure you don’t push .env files — they’re ignored via .gitignore.
+- You can safely keep both apps in one repo; GitHub Actions can build each independently if needed.
+- Shared code (like Supabase config) can go into /shared.
+
+---
+
+👤 Author
+
+Email: hugohafnaoui@gmail.com
+GitHub: hafnaohu
+
+---
