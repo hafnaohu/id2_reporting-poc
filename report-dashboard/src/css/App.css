@@ -128,7 +128,7 @@ button.full-width {
 
 /* Table responsiveness */
 .table-container {
-  width: 100%;
+  width: 80%;
   overflow-x: auto;
   margin-bottom: 1rem;
 }
@@ -169,7 +169,7 @@ img {
 .map-container,
 .leaflet-container {
   
-  width: 100%;
+  width: 80%;
   height: 80vh;
   border-radius: 8px;
   transition: all 0.3s ease;
