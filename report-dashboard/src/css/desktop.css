@@ -64,7 +64,7 @@
     /* Map container (leaflet) should fill the screen nicely */
     .map-container,
     .leaflet-container {
-        width: 80%;
+        width: 1000%;
         /* Full horizontal width of the dashboard */
         height: 85vh;
         /* Take 85% of viewport height (large but not full) */
@@ -76,7 +76,7 @@
 
     /* Wrapper around map, ensures map centers horizontally if needed */
     .map-wrapper {
-        width: 80%;
+        width: 100%;
         /* Ensure wrapper fills width too */
         display: flex;
         /* Flexbox container */

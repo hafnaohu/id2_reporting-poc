@@ -128,7 +128,7 @@ button.full-width {
 
 /* Table responsiveness */
 .table-container {
-  width: 80%;
+  width: 100%;
   overflow-x: auto;
   margin-bottom: 1rem;
 }
