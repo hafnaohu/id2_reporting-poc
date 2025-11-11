@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "xcopy ..\\shared .\\shared /E /I /Y",
+    "prebuild": "cp -r ../shared ./shared",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
