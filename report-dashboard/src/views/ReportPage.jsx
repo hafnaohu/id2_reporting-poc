@@ -5,10 +5,10 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 //Import for the translation
-import { useLanguage } from "../utils/LanguageContext";
+import { useLanguage } from "../utils/LanguageContext.jsx";
 
 //Import the database 
-import { supabase } from "../../../shared/supabaseClient";
+import { supabase } from "@shared/supabaseClient.js";
 
 import "../App.jsx";
 
