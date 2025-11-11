@@ -1,6 +1,6 @@
 
 {
-    "_comment": "Include shared folder because it's outside of the tree frolder",
+    
     "rootDirectory": "report-dashboard",
     "includeFiles": ["shared/**"]
 }
