@@ -1,6 +1,5 @@
 
 {
-    
     "rootDirectory": "report-dashboard",
     "includeFiles": ["shared/**"]
 }
