@@ -1,0 +1,88 @@
+/* Desktop grid layout */
+@media (min-width: 801px) {
+    .App {
+        display: flex;
+        /* Use flexbox for vertical stacking */
+        flex-direction: column;
+        /* Stack elements (title, buttons, table/map) vertically */
+        align-items: stretch;
+        /* Let children (table/map) fill full horizontal width */
+        justify-content: flex-start;
+        /* Keep content aligned at the top of the page */
+        width: 100%;
+        /* Fill the entire screen width */
+        max-width: none;
+        /* Remove any maximum width restriction */
+        margin: 0;
+        /* Remove automatic centering or spacing */
+        padding: 1rem 2rem;
+        /* Small horizontal padding (space from screen edges) */
+        box-sizing: border-box;
+        /* Include padding in total width */
+
+    }
+
+    .filters {
+        display: flex;
+        /* Arrange filter inputs in a row */
+        justify-content: flex-start;
+        /* Align them to the left edge */
+        align-items: center;
+        /* Vertically center the inputs */
+        flex-wrap: wrap;
+        /* Wrap to a new line if too many filters */
+        gap: 0.75rem;
+        /* Small consistent spacing between filters */
+        margin-bottom: 1rem;
+        /* Space below the filters before the table/map */
+        position: sticky;
+    }
+
+    /* Make the table fill the full screen width */
+    table {
+        width: 100%;
+        /* Stretch across entire screen width */
+        border-collapse: collapse;
+        /* Merge table borders for a cleaner look */
+        font-size: 1rem;
+        /* Keep text readable on large displays */
+    }
+
+    /* Style for table headers and cells */
+    th,
+    td {
+        padding: 0.8rem;
+        /* Add space around text for readability */
+    }
+
+    /* Slightly bigger images on desktop screens */
+    img {
+        max-width: 120px;
+        /* Limit image width inside the table */
+    }
+
+    /* Map container (leaflet) should fill the screen nicely */
+    .map-container,
+    .leaflet-container {
+        width: 100%;
+        /* Full horizontal width of the dashboard */
+        height: 85vh;
+        /* Take 85% of viewport height (large but not full) */
+        border-radius: 8px;
+        /* Rounded corners for nicer visuals */
+        margin-top: 1rem;
+        /* Space between filters/buttons and the map */
+    }
+
+    /* Wrapper around map, ensures map centers horizontally if needed */
+    .map-wrapper {
+        width: 100%;
+        /* Ensure wrapper fills width too */
+        display: flex;
+        /* Flexbox container */
+        justify-content: center;
+        /* Center map horizontally within wrapper */
+    }
+
+
+}

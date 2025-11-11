@@ -1,0 +1,43 @@
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 800px) {
+
+    .App {
+        display: flex;
+        /* Use flexbox for vertical stacking */
+        flex-direction: column;
+        /* Stack elements (title, buttons, table/map) vertically */
+        align-items: stretch;
+        /* Let children (table/map) fill full horizontal width */
+        justify-content: flex-start;
+        /* Keep content aligned at the top of the page */
+        width: 100%;
+        /* Fill the entire screen width */
+        max-width: none;
+        /* Remove any maximum width restriction */
+        margin: 0;
+        /* Remove automatic centering or spacing */
+        padding: 1rem 2rem;
+        /* Small horizontal padding (space from screen edges) */
+        box-sizing: border-box;
+        /* Include padding in total width */
+
+    }
+
+    .filters {
+
+        display: -moz-grid-line, flex;
+        align-items: stretch;
+        position: sticky, center;
+
+    }
+
+    button {
+        display: -moz-grid-line, flex;
+        align-items: stretch;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+}

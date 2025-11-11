@@ -1,11 +1,7 @@
 //Url public de la base de données Supabase pour Storage
 //https://wwhgckcxkaaucmrxcjzp.storage.supabase.co/storage/v1/s3
 
-//Url public de la base de données Supabase pour anon public key
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3aGdja2N4a2FhdWNtcnhjanpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTU5MjYsImV4cCI6MjA3NzMzMTkyNn0.TaaON4s_vVKKdHy-Ddj61ScELPBQkfYxm6AAEKM5cRk
 
-//Url public de la base de données Supabase pour API
-//https://wwhgckcxkaaucmrxcjzp.supabase.co
 import * as FileSystem from "expo-file-system/legacy";
 import { Buffer } from "buffer";
 
@@ -29,8 +25,8 @@ import { Camera } from "expo-camera";
 //Import for translation
 import { useLanguage } from "../utils/translation/LanguageContext.jsx";
 
-//import the supabase JavaScript code
-import {supabase} from "../services/supabase.js";
+//Import the supabase database's URL and public annon key
+import {supabase} from "../../shared/supabaseClient.js";
 
 export default function CameraScreen() {
 
