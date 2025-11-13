@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../utils/LanguageContext.jsx";
 
 //Import the database 
-import { supabase } from "../../shared/supabaseClient.js";
+import { supabase } from "../utils/supabaseClient.js";
 
-import "../App.jsx";
+//import "../App.jsx";
 
 //Import css
 import "../css/App.css";

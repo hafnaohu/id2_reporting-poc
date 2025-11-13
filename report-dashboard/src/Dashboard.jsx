@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 
 //Import to add the supabase database to the project
-import { supabase } from "../shared/supabaseClient.js";
+import { supabase } from "./utils/supabaseClient.js";
 
 //Import for the biligual button
 import { useLanguage } from "./utils/LanguageContext.jsx";
