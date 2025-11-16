@@ -71,8 +71,14 @@ export default function MapView({ reports }) {
         <MapResizer />
     
         <TileLayer
-          attribution={`&copy; <a href="https://www.openstreetmap.org/">${t("openStreetMap")}</a> ${t("contributors")}`}
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          /*If you want to use OpenStreetMap (doesn't support languages other than English) uncomment this part*/
+          /*attribution={`&copy; <a href="https://www.openstreetmap.org/">${t("openStreetMap")}</a> ${t("contributors")}`}
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"*/
+
+          /*Here we use wikimedia (Does support multilingual tiles) */
+          attribution={`&copy; <a href="https://www.openstreetmap.org/">${t("openStreetMap")}</a> ${t("contributors")} | © Wikimedia`}
+          url={`https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png?lang=${lang}`}
+
         />
         {validReports.map((r) => (
           <Marker key={r.id} position={[r.lat, r.lon]} icon={icon}>
