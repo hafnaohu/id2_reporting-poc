@@ -76,7 +76,7 @@ export default function MapView({ reports }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"*/
 
           /*Here we use MapTiler (Does support multilingual tiles) */
-          attribution={`&copy; <a href="https://www.openstreetmap.org/">${t("openStreetMap")}</a> ${t("contributors")} | © Wikimedia`}
+          attribution={`&copy; <a href="https://www.openstreetmap.org/">${t("openStreetMap")}</a> ${t("contributors")} | © MapTiler`}
           url={`https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=hRQe5wU2sbNEfVrG5Lbd&language=${lang}`}
 
         />
