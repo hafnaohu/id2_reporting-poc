@@ -1,5 +1,5 @@
 /* Desktop grid layout */
-@media (min-width: 801px) {
+@media (max-width: 1001px) {
     .App {
         display: flex;
         /* Use flexbox for vertical stacking */
@@ -9,14 +9,14 @@
         /* Let children (table/map) fill full horizontal width */
         justify-content: flex-start;
         /* Keep content aligned at the top of the page */
+        padding: 1rem;
+            /* Small horizontal padding (space from screen edges) */
         width: 100%;
         /* Fill the entire screen width */
         max-width: none;
         /* Remove any maximum width restriction */
-        margin: 0;
+        margin: 0 auto;
         /* Remove automatic centering or spacing */
-        padding: 1rem 2rem;
-        /* Small horizontal padding (space from screen edges) */
         box-sizing: border-box;
         /* Include padding in total width */
 
@@ -64,7 +64,7 @@
     /* Map container (leaflet) should fill the screen nicely */
     .map-container,
     .leaflet-container {
-        width: 1000%;
+        width: 100%;
         /* Full horizontal width of the dashboard */
         height: 85vh;
         /* Take 85% of viewport height (large but not full) */
@@ -72,6 +72,7 @@
         /* Rounded corners for nicer visuals */
         margin-top: 1rem;
         /* Space between filters/buttons and the map */
+        height: 80vh;
     }
 
     /* Wrapper around map, ensures map centers horizontally if needed */

@@ -55,7 +55,7 @@ export default function MapView({ reports }) {
   const validReports = reports.filter(r => r.lat && r.lon);
   const defaultCenter = validReports.length
     ? [validReports[0].lat, validReports[0].lon]
-    : [51.4816, -3.1791]; // fallback: Cardiff
+    : [53.0450, -2.9925]; // fallback: Wrexham
 
   //Const for the translation
   const { t, lang } = useLanguage();
